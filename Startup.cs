@@ -14,7 +14,7 @@ namespace UserCRUD.FuncApp
         public override void Configure(IFunctionsHostBuilder builder)
         {
             var connectionString = 
-                Environment.GetEnvironmentVariable("SqlServerConnection");
+                Environment.GetEnvironmentVariable("SqlConnectionString");
             builder.Services.AddDbContext<DataContext>(x =>
             {
                 x.UseSqlServer(connectionString
